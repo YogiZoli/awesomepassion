@@ -20,6 +20,8 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
 #   gem 'cucumber-rails', '1.3.0'
 end
 
