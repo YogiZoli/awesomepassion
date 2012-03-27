@@ -1,86 +1,35 @@
 require 'spec_helper'
 
-describe "StaticPages" do
+describe "Static pages" do
 
-  let(:base_title) { "Awesome" }
+  subject { page }
 
-  describe "Home Page" do
+  describe "Home page" do
+    before { visit root_path }
 
-    it "should have the content 'Home'" do
-      visit root_path
-      page.should have_content('Home')
-    end
-    
-    it "should have right title" do
-      visit root_path
-      page.should have_selector('title', :text => "#{base_title} | Home")
-    end
-    
-    it "should have right h1 tag with Home" do
-      visit root_path
-      page.should have_selector('h1', :text => "Home")
-    end
+    it { should have_selector('h1',    text: 'Home') }
+    it { should have_selector('title', text: full_title('')) }
+    it { should_not have_selector 'title', text: '| Home' }
+  end
 
-    
-  end # describe Home Page
-    
   describe "Help page" do
+    before { visit help_path }
 
-    it "should have the content 'Help'" do
-      visit help_path
-      page.should have_content('Help')
-    end
+    it { should have_selector('h1',    text: 'Help') }
+    it { should have_selector('title', text: full_title('Help')) }
+  end
 
-    it "should have right title" do
-      visit help_path
-      page.should have_selector('title', :text => "#{base_title} | Help")
-    end
-
-    it "should have right h1 tag with Help" do
-      visit help_path
-      page.should have_selector('h1', :text => "Help")
-    end
-
-
-  end # describe Help Page
-  
   describe "About page" do
-  
-    it "should have the content 'About'" do
-      visit about_path
-      page.should have_content('About')
-    end
-    
-    it "should have right title" do
-      visit about_path
-      page.should have_selector('title', :text => "#{base_title} | About")
-    end
-    
-    it "should have right h1 tag with About" do
-      visit about_path
-      page.should have_selector('h1', :text => "About")
-    end
+    before { visit about_path }
 
-  end # describe About PAge
+    it { should have_selector('h1',    text: 'About') }
+    it { should have_selector('title', text: full_title('About')) }
+  end
 
-    describe "Contact Page" do
+  describe "Contact page" do
+    before { visit contact_path }
 
-    it "should have the content 'Contact'" do
-      visit contact_path
-      page.should have_content('Contact')
-    end
-    
-    it "should have right title" do
-      visit contact_path
-      page.should have_selector('title', :text => "#{base_title} | Contact")
-    end
-    
-    it "should have right h1 tag with Home" do
-      visit contact_path
-      page.should have_selector('h1', :text => "Contact")
-    end
-    
-  end # describe Contect Page
-  
-end #end of StaticPages
-
+    it { should have_selector('h1',    text: 'Contact') }
+    it { should have_selector('title', text: full_title('Contact')) }
+  end
+end
