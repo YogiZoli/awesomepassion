@@ -57,7 +57,8 @@ module Awesomepassion
     config.assets.version = '1.0'
     
     config.generators do |g|
-        g.test_framework :rspec
+        g.test_framework :rspec, :fixtures => false
+        # g.template_engine :haml
     end
   end
 end
