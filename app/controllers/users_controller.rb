@@ -8,9 +8,9 @@ class UsersController < ApplicationController
   end
   
   def create 
-    @user = User.new(params[:id])
+    @user = User.new(params[:user])
     if @user.save
-      #Handle success
+      redirect_to @user
     else
       render 'new'
     end
