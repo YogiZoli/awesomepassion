@@ -1,0 +1,12 @@
+---
+hu:
+  activerecord:
+    attributes:
+      user:
+        password_digest: Jelszó
+  helpers:
+    label:
+      user:
+        email: Email
+        name: Név
+        password: Jelszó

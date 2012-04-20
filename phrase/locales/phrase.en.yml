@@ -1,0 +1,12 @@
+---
+en:
+  activerecord:
+    attributes:
+      user:
+        password_digest: Password
+  helpers:
+    label:
+      user:
+        email: Email
+        name: ~ 
+        password: Password

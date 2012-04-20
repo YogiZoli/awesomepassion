@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+  var phrase_auth_token = 'rJ42iB4qo9XzmQpLy9b6';
+  (function() {
+    var phraseapp = document.createElement('script'); phraseapp.type = 'text/javascript'; phraseapp.async = true;
+    phraseapp.src = ['https://', 'phraseapp.com/assets/phrase/0.1/app.js?', new Date().getTime()].join('');
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(phraseapp, s);
+  })();

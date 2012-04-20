@@ -4,6 +4,7 @@ gem 'rails', '3.2.2'
 gem 'thin', '1.3.1'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'phrase'
 #gem 'will_paginate', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
